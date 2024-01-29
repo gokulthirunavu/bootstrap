@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-- font-style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=PT+Sans&family=PT+Sans+Narrow&family=Source+Sans+3:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="../image/logo4.png" type="image/x-icon">
+    <title>Restro-Bar</title>
+    <!-- RESTAURANT -->
+    
+    <!-- css style sheet -->
+    <link rel="stylesheet" href="../css/restaurant.css">
+  </head>
+  <body>
+     <!-- navigation -->
+     <nav class="navbar navbar-expand-lg navigation navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../image/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          <i>Dusk & Draughts</i>
+        </a>
+      </div>
+      <div class="container-fluid justify-content-between">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Eat</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Drink</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Party</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">More</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container-fluid d-inline-flex gap-1 justify-content-end">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button type="button" class="btn btn-outline-danger" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Register</button>
+          <ul class="dropdown-menu" id="dd-menu">
+              
+              <li><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginbox">
+                  Login
+                </button></li>
+              <li><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signbox">
+                  SignIn
+                </button></li>
+          </ul>
+        </form>
+      </div>
+    </nav>
+
+
+
+     <!-- Modal 1 -->
+  <div class="modal fade" id="loginbox" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title justify-content-center" id="staticBackdropLabel">LOGIN</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+          <div class="modal-body">
+            <form action="process_login.php" method="post">
+                <div class="mb-3">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label for="password">Password:</label>
+                    <input type="password" id="loginpassword" name="loginpassword" required>
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label for="forgot"><a href="forgot">Forgot Password</a></label>
+                </div>
+                
+                <br><hr>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Login</button>
+            </form>
+          </div>
+        </div>
+    </div>
+  </div>
+
+<!-- Modal 2 -->
+  <div class="modal fade" id="signbox" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+      <!-- HomeCarousel -->
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../image/burj-al.jpg" class="d-block w-100" alt="restaurant-1">
+            <div class="carousel-caption d-none d-md-block" id="homecontent">
+                <h3 id="head"><i>"Epicurean Paradise:- Where Every Bite Tells a Story."</i></h3>
+                <p id="para">"Discover a symphony of flavors at [Restaurant Name], where culinary mastery meets unforgettable dining experiences."</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../image/restaurant2.jpg" class="d-block w-100" alt="restaurant-2">
+            <div class="carousel-caption d-none d-md-block" id="homecontent">
+                <h3 id="head"><i>"Savor Serenity: Immerse Yourself in the Tranquil Ambience."</i></h3>
+                <p id="para">"Experience an enchanting blend of sophistication and comfort, where the ambience sets the stage for culinary delight."</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../image/restaurant3.jpg" class="d-block w-100" alt="restaurant-3">
+            <div class="carousel-caption d-none d-md-block" id="homecontent">
+                <h3 id="head"><i>Culinary Poetry: A Gastronomic Symphony Unfolds."</i></h3>
+                <p id="para">"Elevate your palate with an exquisite array of flavors, where each dish is a masterpiece crafted to indulge your senses."</p>
+              </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+      <!-- food -->
+      <div class="container-fluid food">
+        <br>
+        <br>
+        <p class="display-6 text-center heading"><i><b>Unrivaled Signature Selections & <br> Exclusive Culinary Secrets.</b></i></p>
+        <br>
+        <div class="card w-50 mb-3 maincard">
+          <img src="../image/card1.webp" class="card-img-top" id="card1"alt="signaturefoods">
+          <div class="card-body">
+            <h5 class="card-title">"The Pinnacle of Palate Pleasure"</h5>
+            <p class="card-text">Savor distinction with our Signature Symphony, where every dish is a masterpiece of culinary innovation.</p>
+          </div>
+        </div>
+         <!--below cards -->
+        <div class="container-fluid">
+          <div class="row row-cols-1 row-cols-md-3 g-3 belowcards">
+            <div class="col">
+              <div class="card">
+                <img src="../image/card-d-1.jpg" class="card-img-top" alt="Arancini.">
+                <div class="card-body">
+                  <h5 class="card-title">Arancini</h5>
+                  <p class="card-text">
+                    Experience a taste of Italy's charm with our Arancini, where crispy, golden orbs of risotto embrace a burst of delectable flavors and taste that captivates every palate.</p>
+                    <a href="https://en.wikipedia.org/wiki/Arancini" class="btn btn-outline-danger">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../image/card-d-2.jpg" class="card-img-top" alt="Biryani">
+                <div class="card-body">
+                  <h5 class="card-title">Biryani</h5>
+                  <p class="card-text">Savor the essence of indulgence with our Biryani, a symphony of aromatic spices and tenderly cooked rice on a flavorful journey through the heart of authentic culinary bliss.</p>
+                  <a href="https://en.wikipedia.org/wiki/Biryani" class="btn btn-outline-danger">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../image/card-d-3.webp" class="card-img-top" alt="Lasagna.">
+                <div class="card-body">
+                  <h5 class="card-title">Lasagna</h5>
+                  <p class="card-text">Indulge in the comforting layers of perfection with our Lasagna, with savory flavors and melt-in-your-mouth goodness unite to create an Italian classic redefined.</p>
+                  <a href="https://en.wikipedia.org/wiki/Lasagna" class="btn btn-outline-danger">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+
+
+      <!-- section -->
+      <div class="container-fluid text-center background p-5">
+        <h1 id="head"><i>Harmony of Senses</i></h1>
+        <p>In the tapestry of taste, our culinary artisans weave vibrant flavors, a gastronomic masterpiece that tantalizes every palate. At the Elixir Emporium, libations blend like a poetic dance, where each sip tells a story, and spirits mingle in the alchemy of delight. Indulge in the symphony of senses at <i>"Dusk & Draughts"</i>, where the harmony of foods and drinks creates an unforgettable tableau of culinary artistry.</p>
+      </div>
+
+
+
+      <!--rooms -->
+       <div class="container-fluid" id="room-service">
+        <br><br>
+        <p class="display-6 text-center"><i><b>Seamless Sophistication: Exceptional Service and Refined Ambiance</b></i></p>
+        <br> 
+        <!-- block-1 -->
+        <div class="container-fluid row-cols-4  d-inline-flex justify-content-center gx-4 r-blocks">
+          <div class="col-3 text-center room-width px-4">
+            <h2 class="featurette-heading">
+              "Refined Hospitality" <br>
+              <span class="text-muted"> Effortless Elegance</span>
+            </h2>
+            <hr>
+            <p class="lead"><i>Experience refined hospitality and effortless elegance in our room service at [Restaurant Name], where every detail is designed to exceed your expectations</i></p>
+          </div>
+          <div class="col-3 ">
+            <img src="../image/bed-1.jpg" alt="room1" class="img-fluid rounded " >
+          </div>
+        </div>
+        <!-- block-2 -->
+        <div class="container-fluid row-cols-4  d-inline-flex justify-content-center gx-4 r-blocks">
+          <div class="col-3 ">
+            <img src="../image/bed-2.jpg" alt="room2" class="img-fluid rounded " >
+          </div>
+          <div class="col-3 text-center room-width px-4">
+            <h2 class="featurette-heading">
+              "Sophisticated Dining Atmosphere" <br>
+              <span class="text-muted"> Elegance Unveiled</span>
+            </h2>
+            <hr>
+            <p class="lead"><i>Discover an unparalleled dining experience with our sophisticated dining atmosphere, where elegance is unveiled in every carefully curated detail into a sensory masterpiece.</i></p>
+          </div>
+        </div>
+      </div>
+    
+
+
+      <!-- bar -->
+      <div class="container-fluid" id="bar-service">
+        <br><br>
+        <p class="display-6 text-center"><i><b>Sip & Socialize:Captivating Bar Experience</b></i></p>
+        <br>
+        <!-- block-1 -->
+        <div class="container-fluid row-cols-4  d-inline-flex justify-content-center gx-4 b-blocks">
+          <div class="col-3 text-center bar-width px-4">
+            <h2 class="featurette-heading">
+              "Libation Lounge" <br>
+              <span class="text-muted"> Crafted Concoctions</span>
+            </h2>
+            <hr>
+            <p class="lead"><i>Unwind in our Libation Lounge at [Restaurant Name], where expertly Crafted Concoctions redefine the art of mixology, inviting you to savor every sip in style.</i></p>
+          </div>
+          <div class="col-3 ">
+            <img src="../image/bar-1.jpg" alt="bar1" class="img-fluid rounded " >
+          </div>
+        </div>
+        <!-- block-2 -->
+        <div class="container-fluid row-cols-4  d-inline-flex justify-content-center gx-4 b-blocks">
+          <div class="col-3 ">
+            <img src="../image/bar-2.jpg" alt="bar2" class="img-fluid rounded " >
+          </div>
+          <div class="col-3 text-center bar-width px-4">
+            <h2 class="featurette-heading">
+              "Signature Spirits" <br>
+              <span class="text-muted">Impeccable Pouring</span>
+            </h2>
+            <hr>
+            <p class="lead"><i>Elevate your evening with Cocktail Craft with Savor the extraordinary at our bar, where Service Excellence meets every sip, ensuring each signature drink is a masterpiece in your glass and  creating a harmonious experience for connoisseurs of fine libations.</i></p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- riads -->
+      <div class="container-fluid" id="riads-service">
+        <br><br>
+        <p class="display-6 text-center"><i><b>Architectural Bliss: Riads, Design, and Pool Perfection</b></i></p>
+        <br>
+        <!-- block-1 -->
+        <div class="container-fluid row-cols-4  d-inline-flex justify-content-center gx-4 ri-blocks">
+          <div class="col-3 text-center riads-width px-4">
+            <h2 class="featurette-heading">
+              "Culinary Retreat" <br>
+              <span class="text-muted">Elegant Oasis</span>
+            </h2>
+            <hr>
+            <p class="lead"><i>Discover a Culinary Retreat, where an Elegant Oasis invites you to escape into a world of exquisite flavors and serene ambiance, transcending the dining experience.</i></p>
+          </div>
+          <div class="col-3 ">
+            <img src="../image/riads-2.jpg" alt="riads1" class="img-fluid rounded " >
+          </div>
+        </div>
+        <!-- block-2 -->
+        <div class="container-fluid row-cols-4  d-inline-flex justify-content-center gx-4 ri-blocks">
+          <div class="col-3 ">
+            <img src="../image/riads-3.jpg" alt="riads2" class="img-fluid rounded " >
+          </div>
+          <div class="col-3 text-center riads-width px-4">
+            <h2 class="featurette-heading">
+              "Architectural Haven" <br>
+              <span class="text-muted">Poolside Tranquility</span>
+            </h2>
+            <hr>
+            <p class="lead"><i>Experience a Design Oasis, seamlessly blending stylish architecture with Poolside Tranquility. Indulge in a culinary journey amid serene waters and captivating design, where every detail enhances your dining escape</i></p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- footer -->
+  <div class="container-fluid text-center aboutus py-3">
+  <h1><i>ABOUT US</i></h1>
+    <P><i>Special Moment</i></P>
+  </div>
+  <div class="container-fluid p-5" id="welcome">
+    <div class="row row-cols-2">
+      <div class="col-5 text-center p-5 welcome rounded-circle">
+        <h3 class=" py-5"><i>"Welcome to <br> Dusk & Draughts"</i></h3>
+      </div>
+      <div class="col-7  text-center p-5">
+          <!-- <h2 id="head" class="text-muted"><i>"Welcome to Dusk & Draughts"</i></h2> -->
+        <p>At Dusk & Draughts, we invite you to immerse yourself in a realm where the enchantment of twilight meets the craftsmanship of libations. Nestled in the heart, our establishment is a haven for those seeking a perfect blend of relaxation and sophistication. With a commitment to redefining the art of mixology and curating an ambiance that seamlessly harmonizes with the warmth of dusk, Dusk & Draughts promises an unforgettable journey through culinary delights and expertly crafted drinks. Join us as we create moments, where each sip and bite becomes a part of your own twilight tale. Cheers to the magic of Dusk & Draughts!</p>
+      </div>
+    </div>
+  </div> 
+
+  <div class="container-fluid row">
+
+  </div>
+
+
+  <!-- <div class="modal fade" id="exampleModal" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+
+         <!-- model-1 -->
+
+        
+
+    <!-- icon script -->
+    <script src="https://kit.fontawesome.com/de53fc340f.js" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
+
+
+
+
+<!-- 
+Title: Web Design Project - Dusk & Draughts Restaurant
+
+Redesigned a fictional restaurant's website using HTML, CSS, and Bootstrap 5, showcasing skills in navigation design, responsive layout, and UI/UX principles. Successfully crafted engaging visuals, implemented a dynamic home carousel, and created distinct sections for services. Achieved a cohesive and modern aesthetic, demonstrating a commitment to delivering seamless user experiences. -->
